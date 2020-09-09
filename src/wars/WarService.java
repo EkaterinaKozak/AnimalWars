@@ -24,8 +24,6 @@ public class WarService {
 			}
 			
 		}
-		
 		return winner;
 	}
-
 }
