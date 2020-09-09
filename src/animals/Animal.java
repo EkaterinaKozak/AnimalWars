@@ -31,6 +31,4 @@ public abstract class Animal {
 		System.out.println("Бьёт " + this.getName());
 		System.out.println("У " + animal.getName() + " осталось " + animal.getEnergy() + " единиц энергии");
 	}
-	
-
 }
