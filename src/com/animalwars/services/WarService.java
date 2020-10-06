@@ -44,7 +44,7 @@ public class WarService implements IWarService {
 		Animal redFinalist = battle(animalList.get(0), animalList.get(1));
 		Animal blueFinalist = battle(animalList.get(2), animalList.get(3));
 		Animal champion = battle(redFinalist, blueFinalist);
-		System.out.println("Applause! The winner of the championship is " + champion.getName());
+		System.out.println("Applause! The winner of the championship is " + champion.getName() + ".");
 		ResultSaver.saveLog("First finalist - " + redFinalist.getName() + "\n" +
 							"Second finalist - " + blueFinalist.getName() + "\n" +
 							"Winner - " + champion.getName());
