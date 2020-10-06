@@ -1,4 +1,4 @@
-package animals;
+package com.animalwars.entities;
 
 public abstract class Animal {
 	
@@ -25,10 +25,5 @@ public abstract class Animal {
 		this.hit = hit;
 	}
 	
-	public void spar(Animal animal) {
-		animal.setEnergy(animal.getEnergy() - this.getHit());
-		this.energy--;
-		System.out.println("Бьёт " + this.getName());
-		System.out.println("У " + animal.getName() + " осталось " + animal.getEnergy() + " единиц энергии");
-	}
+	
 }

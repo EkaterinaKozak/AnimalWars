@@ -1,5 +1,6 @@
-package animals;
-public class Lynx extends Animal{
+package com.animalwars.entities;
+
+public class Lynx extends Animal {
 	
 	public Lynx(String name) {
 		setName(name);
