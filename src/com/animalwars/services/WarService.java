@@ -15,8 +15,8 @@ public class WarService implements IWarService {
 	}
 	
 	public Animal battle (Animal redWrestler, Animal blueWrestler) {
-		int energyOfRedWrestler = redWrestler.getEnergy();
-		int energyOfBlueWrestler = blueWrestler.getEnergy();
+		ResultSaver.serialize(redWrestler);
+		ResultSaver.serialize(blueWrestler);
 		System.out.println("There is " + redWrestler.getName() + " in the red corner of the ring.");
 		System.out.println("There is " + blueWrestler.getName() + " in the blue corner of the ring.");
 		Animal winner = null;
@@ -26,14 +26,14 @@ public class WarService implements IWarService {
 			if(blueWrestler.getEnergy() <= 0) {
 				System.out.println("Knockout! " + blueWrestler.getName() + " was defeated in the " + i + " round.");
 				winner = redWrestler;
-				redWrestler.setEnergy(energyOfRedWrestler);
+				redWrestler = ResultSaver.deserialize(redWrestler.toString());
 				break;
 			}
 			spar(blueWrestler, redWrestler);
 			if(redWrestler.getEnergy() <= 0) {
 				System.out.println("Knockout! " + redWrestler.getName() + " was defeated in the " + i + " round.");
 				winner = blueWrestler;
-				blueWrestler.setEnergy(energyOfBlueWrestler);
+				blueWrestler = ResultSaver.deserialize(blueWrestler.toString());
 				break;
 			}
 		}

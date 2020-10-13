@@ -1,7 +1,10 @@
 package com.animalwars.entities;
 
-public abstract class Animal {
+import java.io.Serializable;
+
+public abstract class Animal implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private int energy;
 	private int hit;
